@@ -32,6 +32,7 @@ module.exports = createCoreController('api::post.post', ({ strapi }) => ({
                 }
             }
         });
+        console.log(entity)
         const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
         return this.transformResponse(sanitizedEntity);
     }
